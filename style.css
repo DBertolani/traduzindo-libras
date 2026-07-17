@@ -4,10 +4,10 @@
 :root {
     --primary-color: #004aad;
     /* Azul corporativo, transmite confiança */
-    --secondary-color: #ff914d;
+    --secondary-color: #d95c14;
     /* Laranja/Coral para CTAs, excelente contraste */
     --text-dark: #333333;
-    --text-light: #666666;
+    --text-light: #4a4a4a;
     --bg-light: #f8f9fa;
     --white: #ffffff;
     --border-radius: 8px;
@@ -211,8 +211,18 @@ body {
 
 .hero-image img {
     width: 100%;
+    max-width: 600px;
+    /* Evita que a imagem quadrada fique gigante em telas grandes */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* Garante que o navegador reserve um espaço quadrado (combate o CLS) */
+    object-fit: cover;
+    /* Impede qualquer tipo de distorção (esticamento) */
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
+    /* Centraliza a imagem no seu contêiner */
 }
 
 /* ==========================================================================
@@ -255,9 +265,12 @@ body {
 .hero-text p,
 .about-content p {
     text-align: justify;
-    -webkit-hyphens: auto; /* Suporte para Safari/Chrome antigos */
-    -ms-hyphens: auto;     /* Suporte para Edge/IE */
-    hyphens: auto;         /* Padrão moderno */
+    -webkit-hyphens: auto;
+    /* Suporte para Safari/Chrome antigos */
+    -ms-hyphens: auto;
+    /* Suporte para Edge/IE */
+    hyphens: auto;
+    /* Padrão moderno */
 }
 
 /* ==========================================================================
