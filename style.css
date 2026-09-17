@@ -7,7 +7,8 @@
     --secondary-color: #d95c14;
     /* Laranja/Coral para CTAs, excelente contraste */
     --text-dark: #333333;
-    --text-light: #4a4a4a;
+    --text-light: #2c2c2c;
+    /* <-- ALTERADO de #4a4a4a para um texto com mais escuro e com melhor contraste */
     --bg-light: #f8f9fa;
     --white: #ffffff;
     --border-radius: 8px;
@@ -84,15 +85,16 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--secondary-color);
+    background-color: #b84a10;
+    /* <-- ALTERADO para um laranja mais escuro com alto contraste no texto branco */
     color: var(--white);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid #b84a10;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: #e07a3e;
-    /* Tom mais escuro para contraste no hover */
+    background-color: #963b0c;
+    /* <-- Tom ainda mais escuro para o estado de hover/focus */
     color: var(--white);
 }
 
@@ -401,6 +403,8 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: var(--transition);
+    text-decoration: none;
+    /* <-- Remover qualquer sublinhado */
 }
 
 .whatsapp-float:hover,

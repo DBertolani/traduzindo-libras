@@ -33,12 +33,28 @@
     <!-- Favicon com caminho relativo -->
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
 
-    <!-- Fonts & Icons -->
+    <!-- Fonts & Icons Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Google Fonts carregado de forma assíncrona para eliminar bloqueio de FCP -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    </noscript>
+
+    <!-- Font Awesome carregado de forma assíncrona -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <!-- Folha de estilos principal do projeto -->
     <link rel="stylesheet" href="style.css">
+
     <!-- Schema Markup para SEO Local e Nacional -->
     <script type="application/ld+json">
     {
